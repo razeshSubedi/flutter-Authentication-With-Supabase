@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_supabase/bloc/auth_bloc.dart';
 import 'package:learning_supabase/pages/home_page.dart';
+import 'package:learning_supabase/pages/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -198,7 +199,14 @@ class _SignUpPageState extends State<SignUpPage> {
                               children: [
                                 Text("Already have an account?."),
                                 TextButton(
-                                    onPressed: () {}, child: Text("Log in."))
+                                    onPressed: () {
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                          builder: (context) => LoginPage(),
+                                        ),
+                                      );
+                                    },
+                                    child: Text("Log in."))
                               ],
                             ),
                           ],

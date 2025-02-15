@@ -18,4 +18,12 @@ final class SignUpButtonClickedEvent extends AuthEvent {
       required this.password});
 }
 
-final class LogInButtonClickedevent extends AuthEvent {}
+final class LogInButtonClickedevent extends AuthEvent {
+  final String email;
+  final String password;
+
+  LogInButtonClickedevent({
+    required this.email,
+    required this.password,
+  });
+}
